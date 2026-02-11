@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>OMNI-SHIELD v1.0 - Ouerd Seeraidi</title>
+    <style>
+        body { background: #000; color: #00ff41; font-family: 'Courier New', monospace; padding: 40px; line-height: 1.6; }
+        .header { color: #fff; border-bottom: 1px solid #00ff41; margin-bottom: 20px; padding-bottom: 10px; }
+        .cursor { animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        PROJECT: OMNI-SHIELD v1.0<br>
+        DEVELOPER: OUERD SERAIDI | ALGERIA<br>
+        CONTACT: apolo2211@gmail.com | +213675137284
+    </div>
+    <div id="app"></div>
+    <span class="cursor">_</span>
+
+    <script>
+        const lines = [
+            "> Initialisation du noyau sécurisé...",
+            "> Analyse Bio-Signature en cours...",
+            "> [OK] Identité confirmée : Ouerd Seeraidi",
+            "> Activation du moteur de mutation dynamique...",
+            "> Système protégé contre les cyber-attaques.",
+            "> Prêt pour le déploiement mondial."
+        ];
+        let i = 0;
+        const app = document.getElementById('app');
+        function type() {
+            if (i < lines.length) {
+                app.innerHTML += lines[i] + "<br>";
+                i++;
+                setTimeout(type, 1200); // Vitesse de frappe
+            }
+        }
+        type();
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "project_info": {
+        "title": "OmniShield",
+        "creator": "Ouerd Seraidi",
+        "location": "Cité 1657 Logts, Ksar El Boukhari, Algérie",
+        "contact": {
+            "email": "apolo2211@gmail.com",
+            "whatsapp": "+213675137284",
+            "phone": "+213675137284"
+        }
+    },
+    "system_config": {
+        "version": "1.0.0",
+        "encoding": "UTF-8",
+        "auto_mutation": true,
+        "security_level": "Ultra"
+    }
+}

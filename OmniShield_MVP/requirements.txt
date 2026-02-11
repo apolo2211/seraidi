@@ -1,0 +1,6 @@
+# Bibliothèques nécessaires pour le prototype
+cryptography>=41.0.0
+numpy>=1.24.0
+requests>=2.31.0
+# Pour l'interface graphique (optionnel pour la démo console)
+customtkinter>=5.2.0
