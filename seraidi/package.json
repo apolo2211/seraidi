@@ -1,0 +1,143 @@
+{
+  "name": "seraidi",
+  "displayName": "SERAIDI - AI Code Assistant",
+  "description": "Assistant intelligent pour déboguer, tester, expliquer et traduire votre code - Créé par Ouerd Seraidi de Ksar El Boukhari, Algérie",
+  "version": "1.0.0",
+  "publisher": "ouerdsaraidi",
+  "author": {
+    "name": "Ouerd Seraidi",
+    "email": "apolo2211@gmail.com",
+    "url": "https://github.com/apolo2211"
+  },
+  "icon": "resources/icons/seraidi-logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apolo2211/seraidi.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Debuggers",
+    "Testing",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "ai",
+    "debug",
+    "testing",
+    "translation",
+    "code-explanation",
+    "openai",
+    "gpt",
+    "algeria",
+    "ksar-el-boukhari",
+    "vscode-extension"
+  ],
+  "activationEvents": [
+    "onCommand:seraidi.debugCode",
+    "onCommand:seraidi.generateTests",
+    "onCommand:seraidi.explainCode",
+    "onCommand:seraidi.translateCode",
+    "onCommand:seraidi.liveAnalysis",
+    "onView:seraidi-sidebar",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:python",
+    "onLanguage:java",
+    "onLanguage:csharp",
+    "onLanguage:php",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "seraidi.debugCode",
+        "title": "SERAIDI: Debugger le code",
+        "category": "SERAIDI"
+      },
+      {
+        "command": "seraidi.generateTests",
+        "title": "SERAIDI: Générer des tests",
+        "category": "SERAIDI"
+      },
+      {
+        "command": "seraidi.explainCode",
+        "title": "SERAIDI: Expliquer le code",
+        "category": "SERAIDI"
+      },
+      {
+        "command": "seraidi.translateCode",
+        "title": "SERAIDI: Traduire le code",
+        "category": "SERAIDI"
+      },
+      {
+        "command": "seraidi.liveAnalysis",
+        "title": "SERAIDI: Analyse en direct",
+        "category": "SERAIDI"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "seraidi.debugCode",
+        "key": "ctrl+shift+d",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "seraidi.generateTests",
+        "key": "ctrl+shift+t",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "seraidi.debugCode",
+          "group": "SERAIDI@1",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "seraidi.explainCode",
+          "group": "SERAIDI@2",
+          "when": "editorTextFocus"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "seraidi-sidebar-view",
+          "title": "SERAIDI",
+          "icon": "$(rocket)"
+        }
+      ]
+    },
+    "views": {
+      "seraidi-sidebar-view": [
+        {
+          "id": "seraidi-sidebar",
+          "name": "SERAIDI",
+          "type": "webview"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "jest",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.33",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "openai": "^4.0.0"
+  }
+}

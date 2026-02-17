@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lancer SERAIDI",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/out/**/*.js"
+      ],
+      "preLaunchTask": "npm: watch"
+    },
+    {
+      "name": "Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": ["--runInBand"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}
